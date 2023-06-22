@@ -92,3 +92,32 @@ jobs:
         service: ${{ env.ECS_SERVICE }}
         cluster: ${{ env.ECS_CLUSTER }}
         wait-for-service-stability: true
+        - name: Download a Build Artifact
+
+  uses: actions/download-artifact@v2.1.1
+
+  with:
+
+    # Artifact name
+
+    name: # optional
+
+    # Destination path
+
+    path: # optional- name: Cache
+
+  uses: actions/cache@v1.2.1
+
+  with:
+
+    # A directory to store and save the cache
+
+    path: 
+
+    # An explicit key for restoring and saving the cache
+
+    key: 
+
+    # An ordered list of keys to use for restoring the cache if no cache hit occurred for key
+
+    restore-keys: # optional
